@@ -12,6 +12,10 @@ fastapi = "*"
 uvicorn = "*"
 jinja2 = "*"
 sqlalchemy = "*"
+pydantic = "*"
+yfinance = "*"
+lxml = "*"
+certifi = "*"
 
 [requires]
 python_version = "3.7"
