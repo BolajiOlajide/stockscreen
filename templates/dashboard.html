@@ -1,6 +1,14 @@
 {% extends "layout.html" %}
 
 {% block content %}
+<script>
+    $(document).ready(function() {
+        $('#add_stocks').click(function() {
+            $(".ui.modal").modal('show');
+        })
+    });
+</script>
+
 <p>You are in the dashboard</p>
 
 <div class="ui input focus">
@@ -24,6 +32,10 @@
 <button class="ui button primary">
     Filter
 </button>
+
+<div>
+    <button id="add_stocks" class="ui button">Add Stocks</button>
+</div>
 
 <table class="ui celled table">
     <thead>
@@ -51,4 +63,25 @@
         </tr>
     </tbody>
 </table>
+
+<div class="ui modal">
+    <i class="close icon"></i>
+    <div class="header">
+        Add stock Symbol
+    </div>
+    <div class="content">
+        <div class="ui form">
+            <div class="field">
+                <label>Enter stock Symbols</label>
+                <textarea rows="2"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="actions">
+        <div class="ui positive right labeled icon button">
+            Add Symbols
+            <i class="plus icon"></i>
+        </div>
+    </div>
+</div>
 {% endblock %}
